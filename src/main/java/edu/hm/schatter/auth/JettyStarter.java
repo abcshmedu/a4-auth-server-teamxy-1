@@ -1,4 +1,4 @@
-package edu.hm.schatter.shareit;
+package edu.hm.schatter.auth;
 
 import org.eclipse.jetty.server.*;
 import org.eclipse.jetty.webapp.*;

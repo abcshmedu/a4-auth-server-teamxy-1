@@ -8,38 +8,13 @@
 
 URI | Method | Wirkung
 --- | --- | ---
-/shareit/media/books | POST | Create a new book.
-/shareit/media/books/{isbn} | GET | Get a JSON reprentation of a certain book.
-/shareit/media/books | GET | List all books in a JSON array.
-/shareit/media/books/{isbn} | PUT | Update an existing book. (JSON only contains the data that is new, as well as the isbn)
+/users/create | POST | Create a new user.
+/users/authenticate | POST | Authenticate yourself, username and password are expected in JSON.
+/users | GET | Get all users.
+/users/{id} | GET | Get information about an existing User.
+/users/{id} | PUT | Update the information of an existing User.
  |  |
-/shareit/media/discs | POST | Create a new disc.
-/shareit/media/discs/{barcode} | GET | Get a JSON reprentation of a certain disc.
-/shareit/media/discs | GET | List all discs in a JSON array.
-/shareit/media/discs/{barcode} | PUT | Update an existing disc. (JSON only contains the data that is new, as well as the barcode)
-
-## JSON Examples
-
-- Book
-
-```json
-{
-  "title":"Title",
-  "author":"Author",
-  "isbn":"123456"
-}
-```
-
-- Disc
-
-```json
-{
-  "title":"Title",
-  "barcode":"Author",
-  "director":"Director",
-  "fsk":0
-}
-```
+/check/{token} | GET | Check the validity of a token.
 
 ## Error Codes
 
