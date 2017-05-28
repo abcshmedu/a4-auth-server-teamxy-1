@@ -18,7 +18,7 @@ public class UserDatabaseImpl implements UserDatabase {
         users.add(admin);
 
         final User user = new User("user", "123456", "user@shareit.com");
-        users.add(admin);
+        users.add(user);
     }
 
     @Override

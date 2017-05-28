@@ -16,7 +16,6 @@ import java.util.concurrent.TimeUnit;
  */
 public class AuthServiceImpl implements AuthService {
     private static final long TOKEN_EXPIRATION_SPAN_IN_MINUTES = 5;
-    private static final String INVALID_TOKEN_RESPONSE = "{\"valid\":false}";
 
     private static Map<String, TokenInfo> tokenDatabase = new HashMap<>();
     private UserDatabase userDatabase = new UserDatabaseImpl();
