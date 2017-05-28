@@ -20,6 +20,12 @@ public class AuthResource {
     //private final MediaService mediaService = new MediaServiceImpl();
     private final AuthService authService = new AuthServiceImpl();
 
+    /**
+     * Provides information whether a token is valid or not.
+     * If a token is valid further information such as email, name and expiration date of the token will be sent.
+     * @param token The token to be checked.
+     * @return Response.
+     */
     @GET
     @Path("/check/{token}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -34,6 +40,12 @@ public class AuthResource {
                 .build();
     }
 
+    /**
+     * Lets an user authenticate via POST.
+     * Expected: JSON including email and password.
+     * @param user User built from json containing email and password.
+     * @return Token or error code.
+     */
     @POST
     @Path("/users/authenticate")
     @Produces(MediaType.APPLICATION_JSON)

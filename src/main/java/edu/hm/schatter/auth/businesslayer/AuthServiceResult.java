@@ -7,11 +7,7 @@ import javax.ws.rs.core.Response;
  */
 public enum AuthServiceResult {
     OK(200, "OK.", Response.Status.OK),
-    ALREADY_EXISTS(400, "The entity you wanted to create already exists.", Response.Status.BAD_REQUEST),
-    INVALID_INFORMATION(400, "The information you provided is invalid.", Response.Status.BAD_REQUEST),
     INCORRECT_INFORMATION(400, "The information you provided is incorrect.", Response.Status.BAD_REQUEST),
-    MISSING_INFORMATION(400, "Some required information is missing.", Response.Status.NOT_FOUND),
-    NOT_FOUND(404, "The requested resource could not be found.", Response.Status.BAD_REQUEST),
     ERROR(500, "Internal Server Error.", Response.Status.INTERNAL_SERVER_ERROR);
 
     private final int code;

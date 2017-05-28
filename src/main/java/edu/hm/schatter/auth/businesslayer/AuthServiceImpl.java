@@ -11,6 +11,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Implementation of auth service.
+ */
 public class AuthServiceImpl implements AuthService {
     private static final long TOKEN_EXPIRATION_SPAN_IN_MINUTES = 5;
     private static final String INVALID_TOKEN_RESPONSE = "{\"valid\":false}";
@@ -62,6 +65,10 @@ public class AuthServiceImpl implements AuthService {
         return result;
     }
 
+    /**
+     * Generates a new and unused token.
+     * @return new and unused token
+     */
     private String getUnusedToken() {
         String token = generateToken();
         while (tokenDatabase.keySet().contains(token)) {
@@ -70,10 +77,17 @@ public class AuthServiceImpl implements AuthService {
         return token;
     }
 
+    /**
+     * Generates a token.
+     * @return Token
+     */
     private String generateToken() {
         return UUID.randomUUID().toString();
     }
 
+    /**
+     * Stores info about a token.
+     */
     private final class TokenInfo {
 
         private boolean valid;
@@ -82,6 +96,9 @@ public class AuthServiceImpl implements AuthService {
         private final String userGroup;
         private final long expirationDate;
 
+        /**
+         * Standard constructor
+         */
         TokenInfo() {
             valid = false;
             user = "";
@@ -90,30 +107,58 @@ public class AuthServiceImpl implements AuthService {
             expirationDate = 0;
         }
 
+        /**
+         * Setter.
+         * @param valid new status
+         */
         public void setValid(boolean valid) {
             this.valid = valid;
         }
 
+        /**
+         * Getter. Needed for jackson.
+         * @return valid
+         */
         public boolean getValid() {
             return valid;
         }
 
+        /**
+         * Getter. Needed for jackson
+         * @return user
+         */
         public String getUser() {
             return user;
         }
 
+        /**
+         * Getter. Needed for jackson
+         * @return email
+         */
         public String getEmail() {
             return email;
         }
 
+        /**
+         * Getter. Needed for jackson
+         * @return user group
+         */
         public String getUserGroup() {
             return userGroup;
         }
 
+        /**
+         * Getter. Needed for jackson
+         * @return expiration date
+         */
         public long getExpirationDate() {
             return expirationDate;
         }
 
+        /**
+         * Normal constructor
+         * @param user User containing information
+         */
         TokenInfo(User user) {
             this.user = user.getUsername();
             email = user.getEmail();
@@ -123,6 +168,10 @@ public class AuthServiceImpl implements AuthService {
                     + TimeUnit.MINUTES.toSeconds(TOKEN_EXPIRATION_SPAN_IN_MINUTES);
         }
 
+        /**
+         * Gives info whether the token is expired or still valid.
+         * @return whether the token is expired or still valid.
+         */
         boolean isValid() {
             final long currentTime = TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis());
             return currentTime < expirationDate;
