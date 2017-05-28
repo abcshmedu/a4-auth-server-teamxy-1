@@ -42,19 +42,19 @@ public class AuthResource {
 
         final String token = authService.authenticateUser(user.getEmail(), user.getPassword());
         final AuthServiceResult result;
-        final String JSON;
+        final String json;
 
         if (token == null) {
             result = AuthServiceResult.INCORRECT_INFORMATION;
-            JSON = result.getJSON();
+            json = result.getJSON();
         } else {
             result = AuthServiceResult.OK;
-            JSON = String.format("{\"token\":\"%s\"}", token);
+            json = String.format("{\"token\":\"%s\"}", token);
         }
 
         return Response
             .status(result.getStatus())
-            .entity(JSON)
+            .entity(json)
             .build();
     }
 

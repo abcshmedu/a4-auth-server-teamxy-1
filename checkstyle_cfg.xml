@@ -8,125 +8,125 @@
     Checkstyle-Configuration: SWA
     Description: none
 -->
-<module username="Checker">
-  <property username="severity" value="error"/>
-  <module username="TreeWalker">
-    <property username="tabWidth" value="4"/>
-    <module username="FileContentsHolder"/>
-    <module username="JavadocMethod">
-      <property username="allowUndeclaredRTE" value="true"/>
-      <property username="suppressLoadErrors" value="true"/>
+<module name="Checker">
+  <property name="severity" value="error"/>
+  <module name="TreeWalker">
+    <property name="tabWidth" value="4"/>
+    <module name="FileContentsHolder"/>
+    <module name="JavadocMethod">
+      <property name="allowUndeclaredRTE" value="true"/>
+      <property name="suppressLoadErrors" value="true"/>
     </module>
-    <module username="JavadocType"/>
-    <module username="JavadocVariable">
-      <property username="excludeScope" value="private"/>
+    <module name="JavadocType"/>
+    <module name="JavadocVariable">
+      <property name="excludeScope" value="private"/>
     </module>
-    <module username="JavadocStyle">
-      <property username="scope" value="package"/>
+    <module name="JavadocStyle">
+      <property name="scope" value="package"/>
     </module>
-    <module username="ConstantName"/>
-    <module username="LocalFinalVariableName"/>
-    <module username="LocalVariableName"/>
-    <module username="MemberName"/>
-    <module username="MethodName"/>
-    <module username="PackageName">
-      <property username="severity" value="ignore"/>
-      <metadata username="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    <module name="ConstantName"/>
+    <module name="LocalFinalVariableName"/>
+    <module name="LocalVariableName"/>
+    <module name="MemberName"/>
+    <module name="MethodName"/>
+    <module name="PackageName">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module username="ParameterName"/>
-    <module username="StaticVariableName"/>
-    <module username="TypeName"/>
-    <module username="AvoidStarImport">
-      <property username="severity" value="ignore"/>
-      <metadata username="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    <module name="ParameterName"/>
+    <module name="StaticVariableName"/>
+    <module name="TypeName"/>
+    <module name="AvoidStarImport">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module username="IllegalImport"/>
-    <module username="RedundantImport"/>
-    <module username="UnusedImports"/>
-    <module username="LineLength">
-      <property username="severity" value="ignore"/>
-      <metadata username="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    <module name="IllegalImport"/>
+    <module name="RedundantImport"/>
+    <module name="UnusedImports"/>
+    <module name="LineLength">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module username="MethodLength"/>
-    <module username="ParameterNumber"/>
-    <module username="EmptyForIteratorPad"/>
-    <module username="MethodParamPad"/>
-    <module username="NoWhitespaceAfter">
-      <property username="tokens" value="BNOT,DEC,DOT,INC,LNOT,UNARY_MINUS,UNARY_PLUS"/>
+    <module name="MethodLength"/>
+    <module name="ParameterNumber"/>
+    <module name="EmptyForIteratorPad"/>
+    <module name="MethodParamPad"/>
+    <module name="NoWhitespaceAfter">
+      <property name="tokens" value="BNOT,DEC,DOT,INC,LNOT,UNARY_MINUS,UNARY_PLUS"/>
     </module>
-    <module username="NoWhitespaceBefore"/>
-    <module username="OperatorWrap"/>
-    <module username="ParenPad"/>
-    <module username="TypecastParenPad"/>
-    <module username="WhitespaceAround">
-      <property username="tokens" value="ASSIGN,BAND,BAND_ASSIGN,BOR,BOR_ASSIGN,BSR,BSR_ASSIGN,BXOR,BXOR_ASSIGN,COLON,DIV,DIV_ASSIGN,EQUAL,GE,GT,LAND,LCURLY,LE,LITERAL_ASSERT,LITERAL_DO,LITERAL_ELSE,LITERAL_FINALLY,LITERAL_FOR,LITERAL_IF,LITERAL_RETURN,LITERAL_SYNCHRONIZED,LITERAL_TRY,LITERAL_WHILE,LOR,LT,MINUS,MINUS_ASSIGN,MOD,MOD_ASSIGN,NOT_EQUAL,PLUS,PLUS_ASSIGN,QUESTION,RCURLY,SL,SLIST,SL_ASSIGN,SR,SR_ASSIGN,STAR,STAR_ASSIGN,LITERAL_ASSERT,TYPE_EXTENSION_AND,WILDCARD_TYPE"/>
+    <module name="NoWhitespaceBefore"/>
+    <module name="OperatorWrap"/>
+    <module name="ParenPad"/>
+    <module name="TypecastParenPad"/>
+    <module name="WhitespaceAround">
+      <property name="tokens" value="ASSIGN,BAND,BAND_ASSIGN,BOR,BOR_ASSIGN,BSR,BSR_ASSIGN,BXOR,BXOR_ASSIGN,COLON,DIV,DIV_ASSIGN,EQUAL,GE,GT,LAND,LCURLY,LE,LITERAL_ASSERT,LITERAL_DO,LITERAL_ELSE,LITERAL_FINALLY,LITERAL_FOR,LITERAL_IF,LITERAL_RETURN,LITERAL_SYNCHRONIZED,LITERAL_TRY,LITERAL_WHILE,LOR,LT,MINUS,MINUS_ASSIGN,MOD,MOD_ASSIGN,NOT_EQUAL,PLUS,PLUS_ASSIGN,QUESTION,RCURLY,SL,SLIST,SL_ASSIGN,SR,SR_ASSIGN,STAR,STAR_ASSIGN,LITERAL_ASSERT,TYPE_EXTENSION_AND,WILDCARD_TYPE"/>
     </module>
-    <module username="ModifierOrder"/>
-    <module username="RedundantModifier"/>
-    <module username="AvoidNestedBlocks"/>
-    <module username="EmptyBlock"/>
-    <module username="LeftCurly"/>
-    <module username="NeedBraces"/>
-    <module username="AvoidInlineConditionals">
-      <property username="severity" value="ignore"/>
-      <metadata username="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    <module name="ModifierOrder"/>
+    <module name="RedundantModifier"/>
+    <module name="AvoidNestedBlocks"/>
+    <module name="EmptyBlock"/>
+    <module name="LeftCurly"/>
+    <module name="NeedBraces"/>
+    <module name="AvoidInlineConditionals">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module username="EmptyStatement"/>
-    <module username="EqualsHashCode"/>
-    <module username="HiddenField">
-      <property username="severity" value="ignore"/>
-      <metadata username="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    <module name="EmptyStatement"/>
+    <module name="EqualsHashCode"/>
+    <module name="HiddenField">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module username="IllegalInstantiation"/>
-    <module username="InnerAssignment"/>
-    <module username="MagicNumber">
-      <property username="ignoreHashCodeMethod" value="true"/>
-      <property username="ignoreAnnotation" value="true"/>
+    <module name="IllegalInstantiation"/>
+    <module name="InnerAssignment"/>
+    <module name="MagicNumber">
+      <property name="ignoreHashCodeMethod" value="true"/>
+      <property name="ignoreAnnotation" value="true"/>
     </module>
-    <module username="MissingSwitchDefault">
-      <property username="severity" value="ignore"/>
-      <metadata username="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    <module name="MissingSwitchDefault">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module username="SimplifyBooleanExpression"/>
-    <module username="SimplifyBooleanReturn"/>
-    <module username="DesignForExtension">
-      <property username="severity" value="ignore"/>
-      <metadata username="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    <module name="SimplifyBooleanExpression"/>
+    <module name="SimplifyBooleanReturn"/>
+    <module name="DesignForExtension">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module username="FinalClass"/>
-    <module username="HideUtilityClassConstructor"/>
-    <module username="InterfaceIsType"/>
-    <module username="VisibilityModifier"/>
-    <module username="ArrayTypeStyle"/>
-    <module username="FinalParameters">
-      <property username="severity" value="ignore"/>
-      <metadata username="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    <module name="FinalClass"/>
+    <module name="HideUtilityClassConstructor"/>
+    <module name="InterfaceIsType"/>
+    <module name="VisibilityModifier"/>
+    <module name="ArrayTypeStyle"/>
+    <module name="FinalParameters">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module username="TodoComment"/>
-    <module username="UpperEll"/>
-    <module username="CyclomaticComplexity">
-      <property username="max" value="13"/>
+    <module name="TodoComment"/>
+    <module name="UpperEll"/>
+    <module name="CyclomaticComplexity">
+      <property name="max" value="13"/>
     </module>
-    <module username="WhitespaceAfter">
-      <property username="tokens" value="COMMA,SEMI"/>
+    <module name="WhitespaceAfter">
+      <property name="tokens" value="COMMA,SEMI"/>
     </module>
   </module>
-  <module username="JavadocPackage">
-    <property username="severity" value="ignore"/>
-    <metadata username="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+  <module name="JavadocPackage">
+    <property name="severity" value="ignore"/>
+    <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
   </module>
-  <module username="NewlineAtEndOfFile">
-    <property username="severity" value="ignore"/>
-    <metadata username="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+  <module name="NewlineAtEndOfFile">
+    <property name="severity" value="ignore"/>
+    <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
   </module>
-  <module username="Translation"/>
-  <module username="FileLength"/>
-  <module username="FileTabCharacter"/>
-  <module username="RegexpSingleline">
-    <property username="severity" value="ignore"/>
-    <property username="format" value="\s+$"/>
-    <property username="message" value="Line has trailing spaces."/>
-    <metadata username="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+  <module name="Translation"/>
+  <module name="FileLength"/>
+  <module name="FileTabCharacter"/>
+  <module name="RegexpSingleline">
+    <property name="severity" value="ignore"/>
+    <property name="format" value="\s+$"/>
+    <property name="message" value="Line has trailing spaces."/>
+    <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
   </module>
-  <module username="SuppressionCommentFilter"/>
+  <module name="SuppressionCommentFilter"/>
 </module>

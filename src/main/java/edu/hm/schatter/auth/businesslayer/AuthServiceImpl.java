@@ -1,11 +1,9 @@
 package edu.hm.schatter.auth.businesslayer;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.hm.schatter.auth.models.User;
 
-import java.lang.reflect.Method;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -78,11 +76,11 @@ public class AuthServiceImpl implements AuthService {
 
     private final class TokenInfo {
 
-        boolean valid;
-        final String user;
-        final String email;
-        final String userGroup;
-        final long expirationDate;
+        private boolean valid;
+        private final String user;
+        private final String email;
+        private final String userGroup;
+        private final long expirationDate;
 
         TokenInfo() {
             valid = false;
